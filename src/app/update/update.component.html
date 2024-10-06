@@ -1,0 +1,14 @@
+
+<div *ngFor="let user of users">
+    <p>{{ user.name }}</p>
+    <button (click)="editPost(user)">Edit</button>
+</div>
+
+<div *ngIf="selectedPost">
+    <h2>Edit Post</h2>
+    <input [(ngModel)]="selectedPost.name" placeholder="Name" />
+    <button (click)="updateData()">Update</button>
+    <button (click)="selectedPost = null">Cancel</button>
+  </div>
+
+

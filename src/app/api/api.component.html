@@ -1,0 +1,20 @@
+<!-- src/app/app.component.html -->
+
+<h1>Posts</h1>
+<ul>
+  <li *ngFor="let post of posts">
+    <h2>{{ post.title }}</h2>
+   <p>{{ post.body }}</p>
+  </li>
+</ul>
+
+<h2>Create a New Post</h2>
+<form (ngSubmit)="addPost()">
+  <label for="title">Title:</label>
+  <input id="title" [(ngModel)]="newPost.title" name="title" required>
+  
+  <label for="body">Body:</label>
+  <textarea id="body" [(ngModel)]="newPost.body" name="body" required></textarea>
+  
+  <button type="submit">Add Post</button>
+</form>

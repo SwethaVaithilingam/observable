@@ -1,0 +1,48 @@
+
+<h1>User details</h1>
+
+<ul>
+    <li *ngFor="let users of userdetails">
+        <h2>{{users.id}} {{users.name}}</h2>
+        <button (click)="deletePost(users.id)">Delete Post</button>
+       
+    </li>
+</ul>
+
+<h1>Create a new Posts</h1>
+<form (ngSubmit)="addPost()">
+    <label for="title">userId:</label>
+    <input id="title" [(ngModel)]="newPosts.id" name="title" required>
+    
+    <label for="body">UserName:</label>
+    <input type='text'id="body" [(ngModel)]="newPosts.name" name="body" required>
+    
+    <button type="submit">Add Post</button>
+
+
+</form>
+
+<!-- test.component.html -->
+<!--<div>
+    <h1>Users</h1>
+  
+    <div *ngFor="let user of userdetails">
+      <p>{{ user.name }}</p>
+      <button (click)="editPost(user)">Edit</button>
+     <button (click)="deletePost(user.id)">Delete</button>
+    </div>
+  
+    <div *ngIf="selectedPost">
+      <h2>Edit Post</h2>
+      <input [(ngModel)]="selectedPost.name" placeholder="Name" />
+      <button (click)="updatePost()">Update</button>
+      <button (click)="selectedPost = null">Cancel</button>
+    </div>
+  
+    <div>
+      <h2>Add New Post</h2>
+      <input [(ngModel)]="newPosts.name" placeholder="Name" />
+      <button (click)="addPost()">Add</button>
+    </div>
+  </div>-->
+  
