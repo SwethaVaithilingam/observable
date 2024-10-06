@@ -61,6 +61,7 @@ export class TestComponent implements OnInit {
       (error) => {
         console.error('Error deleting post', error); // Handle errors
       }
+      
     );
   }
  
